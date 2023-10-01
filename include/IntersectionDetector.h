@@ -16,13 +16,15 @@ private:
 
 public:
 
-	bool PointInLine(Vector point, Line line) {};
+	static bool PointInLine(Vector point, Line line) {};
 
-	bool PointInCircle(Vector point, Circle cirle) {};
+	static bool PointInCircle(Vector point, Circle cirle) {};
 
-	bool PointInAABB(Vector point, AABB box) {};
+	static bool PointInAABB(Vector point, AABB box) {};
 
-	bool PointInBOX2D(Vector point, BOX2D box) {};
+	static bool PointInBOX2D(Vector point, BOX2D box) {};
+
+	static bool LineInCircle(Line line, Circle circle) {};
 };
 
 #endif // !_INTERSECTIONDETECTOR

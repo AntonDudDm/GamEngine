@@ -21,7 +21,7 @@ using namespace std;
 	}
 
 	//
-	float Rigidbody::getRotate() const{
+	double Rigidbody::getRotate() const{
 		return rotate;
 	}
 

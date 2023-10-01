@@ -3,7 +3,7 @@ using namespace std;
 #include <iostream>
 
 #include "/Users/1/Desktop/Вуз/Programm progect/GitHub/GamEngine/include/Figures.h"
-
+#include "../include/Math.h"
 
 //КРУГ
 Circle::Circle(double rad = 0) {
@@ -60,11 +60,20 @@ Vector BOX2D::getMax()  const
 	return (body.getPosition() + (size * 0.5));
 };
 
+double BOX2D::getRotate() const {
+	return body.getRotate();
+};
+
+Vector BOX2D::getPosition() const {
+	return body.getPosition();
+};
+
 //four vertices
 vector<Vector> BOX2D::getVertices() const 
 {
-	Vector min = getMin();
-	Vector max = getMax();
+	Vector min = this->getMin();
+	Vector max = this->getMax();
+
 
 	vector<Vector> vertices = {
 
@@ -77,7 +86,7 @@ vector<Vector> BOX2D::getVertices() const
 		for (int i = 0; i < 4; i++) {
 
 			//TODO: повернуть вектора вокруг центра на угол
-			//Math.rotate(vertices[i], body.getPosition(), body.getRotate());
+			Math::rotate(vertices[i], body.getRotate(), body.getPosition());
 		}
 	}
 

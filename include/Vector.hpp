@@ -3,7 +3,17 @@
 #ifndef _VECTOR
 #define _VECTOR
 
+
+using namespace std;
+
 #define _EPSILON 0.000001
+
+#define _USE_MATH_DEFINES
+#include <cmath>
+
+#include <limits.h>
+#include <algorithm>
+#include <cfloat>
 
 class Vector {
 
@@ -83,9 +93,17 @@ public:
 		return Res;
 	}
 
+	double operator*(Vector& vec) const {
+		double Res;
+
+		Res = x*vec.getX() + y*vec.getY();
+
+		return Res;
+	}
+
 	bool operator==(Vector a) {
-		return abs(x - a.getX()) <= _EPSILON * max(1.0, max(abs(x), abs(a.getX()))) &&
-			abs(y - a.getY()) <= _EPSILON * max(1.0, max(abs(y), abs(a.getY())));
+		return abs(x - a.getX()) <= DBL_MIN * max(1.0, max(abs(x), abs(a.getX()))) &&
+			abs(y - a.getY()) <= DBL_MIN * max(1.0, max(abs(y), abs(a.getY())));
 	}
 
 

@@ -11,7 +11,7 @@ class Rigidbody {
 private:
 
 	Vector center;
-	float rotate;
+	double rotate;
 
 public:
 
@@ -21,7 +21,7 @@ public:
 
 	Vector getPosition() const {}
 
-	float getRotate() const {}
+	double getRotate() const {}
 
 };
 

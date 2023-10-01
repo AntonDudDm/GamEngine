@@ -16,14 +16,14 @@ class Circle {
 
 private:
 
-	float radius;
+	double radius;
 	Rigidbody body;
 
 public:
 
 	Circle(double rad = 0) {}
 
-	float getRadius() const{
+	double getRadius() const{
 		return radius;
 	}
 
@@ -74,7 +74,13 @@ public:
 
 	Vector getMax() const {};
 
+	double getRotate() const {};
+
+	Vector getPosition() const {};
+
 	vector<Vector> getVertices() const{};
+
+
 
 };
 
