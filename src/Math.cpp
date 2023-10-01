@@ -1,6 +1,6 @@
 
 
-#include "Math.h"
+#include "../include/Math.h"
 
 double Math::toRadians(double angle) {
 

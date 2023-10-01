@@ -128,19 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Figures.cpp" />
+    <ClCompile Include="..\src\GamEngine.cpp" />
+    <ClCompile Include="..\src\IntersectionDetector.cpp" />
     <ClCompile Include="..\src\Line.cpp" />
+    <ClCompile Include="..\src\Math.cpp" />
     <ClCompile Include="..\src\Rigidbody.cpp" />
-    <ClCompile Include="GamEngine.cpp" />
-    <ClCompile Include="IntersectionDetector.cpp" />
-    <ClCompile Include="Math.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Figures.h" />
     <ClInclude Include="..\include\IntersectionDetector.h" />
     <ClInclude Include="..\include\Line.h" />
+    <ClInclude Include="..\include\Math.h" />
     <ClInclude Include="..\include\Rigidbody.h" />
     <ClInclude Include="..\include\Vector.hpp" />
-    <ClInclude Include="Math.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
