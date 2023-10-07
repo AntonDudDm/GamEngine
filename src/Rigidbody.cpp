@@ -10,7 +10,7 @@ using namespace std;
 		rotate = 0;
 	}
 
-	Rigidbody::Rigidbody(Vector Center = Vector(), double rot = 0) {
+	Rigidbody::Rigidbody(Vector Center = Vector(), double rot) {
 		center = Center;
 		rotate = rot;
 	}

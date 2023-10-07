@@ -6,7 +6,7 @@ using namespace std;
 #include "../include/Math.h"
 
 // –”√
-Circle::Circle(double rad = 0) {
+Circle::Circle(double rad) {
 	radius = rad;
 }
 

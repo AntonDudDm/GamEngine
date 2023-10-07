@@ -15,13 +15,13 @@ private:
 
 public:
 
-	Rigidbody() {}
+	Rigidbody();
 
-	Rigidbody(Vector Center, double rot = 0) {}
+	Rigidbody(Vector Center, double rot = 0);
 
-	Vector getPosition() const {}
+	Vector getPosition() const;
 
-	double getRotate() const {}
+	double getRotate() const;
 
 };
 

@@ -21,7 +21,7 @@ private:
 
 public:
 
-	Circle(double rad = 0) {}
+	Circle(double rad);
 
 	double getRadius() const{
 		return radius;
@@ -45,13 +45,13 @@ private:
 
 public:
 
-	AABB() {}
+	AABB();
 
-	AABB(Vector min, Vector max) {};
+	AABB(Vector min, Vector max);
 
-	Vector getMin() const {};
+	Vector getMin() const;
 
-	Vector getMax() const {};
+	Vector getMax() const;
 
 };
 
@@ -66,19 +66,19 @@ private:
 
 public:
 
-	BOX2D() {}
+	BOX2D();
 
-	BOX2D(Vector min, Vector max) {};
+	BOX2D(Vector min, Vector max);
 
-	Vector getMin() const {};
+	Vector getMin() const;
 
-	Vector getMax() const {};
+	Vector getMax() const;
 
-	double getRotate() const {};
+	double getRotate() const;
 
-	Vector getPosition() const {};
+	Vector getPosition() const;
 
-	vector<Vector> getVertices() const{};
+	vector<Vector> getVertices() const;
 
 
 

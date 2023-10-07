@@ -17,13 +17,17 @@ private:
 
 public:
 
-	Line(Vector From, Vector To) {};
+	Line(Vector From, Vector To);
 
-	Vector getFrom() const {};
+	Line(Line& a);
 
-	Vector getTo() const {};
+	Vector getFrom() const;
 
-	bool PointInLine(Vector point, Line line) {};
+	Vector getTo() const;
+
+	double lengthSquared();
+
+	Line lineRotate(double AngleDegree, Vector origin);
 
 };
 

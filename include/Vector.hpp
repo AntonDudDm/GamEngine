@@ -38,11 +38,11 @@ public:
 		return y;
 	}
 
-	double setX(double X) {
+	void setX(double X) {
 		x = X;
 	}
 
-	double setY(double Y) {
+	void setY(double Y) {
 		y = Y;
 	}
 
@@ -93,13 +93,25 @@ public:
 		return Res;
 	}
 
-	double operator*(Vector& vec) const {
+	Vector& mul(Vector& vec) const {
+		Vector Res;
+
+		Res.setX(x * vec.getX());
+		Res.setY(y * vec.getY());
+
+		return Res;
+	}
+
+	//как лучше ссылка или не ссылка?? проблема в рэйкасте
+	double operator*(Vector vec) const {
 		double Res;
 
 		Res = x*vec.getX() + y*vec.getY();
 
 		return Res;
 	}
+
+
 
 	bool operator==(Vector a) {
 		return abs(x - a.getX()) <= DBL_MIN * max(1.0, max(abs(x), abs(a.getX()))) &&
@@ -112,6 +124,14 @@ public:
 
 		Res.setX(x + a.getX());
 		Res.setY(y + a.getY());
+
+		return Res;
+	}
+
+	Vector& normalize() const {
+		Vector Res;
+
+		Res = *this * (1.0 / sqrt(x * x + y * y));
 
 		return Res;
 	}

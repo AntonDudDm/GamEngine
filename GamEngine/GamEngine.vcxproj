@@ -132,6 +132,7 @@
     <ClCompile Include="..\src\IntersectionDetector.cpp" />
     <ClCompile Include="..\src\Line.cpp" />
     <ClCompile Include="..\src\Math.cpp" />
+    <ClCompile Include="..\src\Ray.cpp" />
     <ClCompile Include="..\src\Rigidbody.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="..\include\IntersectionDetector.h" />
     <ClInclude Include="..\include\Line.h" />
     <ClInclude Include="..\include\Math.h" />
+    <ClInclude Include="..\include\Ray.h" />
     <ClInclude Include="..\include\Rigidbody.h" />
     <ClInclude Include="..\include\Vector.hpp" />
   </ItemGroup>

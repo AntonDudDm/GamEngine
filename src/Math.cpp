@@ -8,7 +8,7 @@ double Math::toRadians(double angle) {
 	
 };
 
-void Math::rotate(Vector vector, double AngleDegree, Vector origin) 
+void Math::rotate(Vector& vector, double AngleDegree, Vector origin) 
 {
 	//transfer vector in (0;0)
 	double x = vector.getX() - origin.getX();
@@ -33,10 +33,10 @@ void Math::rotate(Vector vector, double AngleDegree, Vector origin)
 
 //нужно переопредилить сравнение т.к машинный эпсилон может давать ошибки при сравнении
 
-bool Math::Compare(double x, double y, double epsilon = DBL_MIN) {
+bool Math::Compare(double x, double y, double epsilon) {
 	return (abs(x - y) <= epsilon * max(1.0, max(abs(x), abs(y))));
 };
 
-bool Math::Compare(Vector vec1, Vector vec2, double epsilon = DBL_MIN) {
+bool Math::Compare(Vector vec1, Vector vec2, double epsilon) {
 	return (Math::Compare(vec1.getX(), vec2.getX(), epsilon)) && (Math::Compare(vec1.getY(), vec2.getY(), epsilon));
 }
